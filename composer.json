@@ -1,0 +1,21 @@
+{
+    "name": "coreiho/silverstripe-patternlab",
+    "description": "Pattern lab",
+    "type": "silverstripe-module",
+    "keywords": ["silverstripe", "patterns", "testing"],
+    "license": "BSD-3-Clause",
+    "authors": [
+    {
+        "name": "Gorrie Coe",
+        "email": "gorriecoe@gmail.com"
+    }
+    ],
+    "require":
+    {
+        "silverstripe/framework": "3.*",
+    	"silverstripe/cms": "3.*"
+    },
+    "extra": {
+        "installer-name": "pattern-lab"
+    }
+}

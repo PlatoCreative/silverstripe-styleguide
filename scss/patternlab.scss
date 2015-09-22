@@ -1,0 +1,57 @@
+$grey: #808080;
+
+.patternMaster{
+    border: 1px solid $grey;
+    padding: 1em;
+}
+
+.patternList{
+    padding: 0px;
+    margin: 0px;
+    background: #222 none repeat scroll 0% 0%;
+    color: #FFF;
+    font-family: "HelveticaNeue","Helvetica","Arial",sans-serif;
+    text-transform: uppercase;
+    // position: fixed;
+    // top: 0px;
+    // left: 0px;
+    // z-index: 2;
+    width: 100%;
+    *{
+        box-sizing: border-box;
+    }
+    a{
+        font-size: 70%;
+        color: $grey;
+        text-decoration: none;
+        display: block;
+        line-height: 1;
+        padding: 1em;
+        transition: color 0.15s ease-out 0s;
+        cursor: pointer;
+        &:hover,
+        &:focus{
+            color: #FFF;
+            background: rgba(255, 255, 255, 0.05) none repeat scroll 0% 0%;
+        }
+    }
+    li{
+        list-style: none;
+    }
+}
+.patternGroup{
+    clear: both;
+    &:after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+.patternTitle{
+    margin: 2em 0px;
+    font-family: "HelveticaNeue","Helvetica","Arial",sans-serif;
+    font-size: 70%;
+    font-weight: normal;
+    padding: 1em 0px;
+    border-bottom: 1px solid $grey;
+}

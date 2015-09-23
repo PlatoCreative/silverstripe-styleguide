@@ -37,7 +37,7 @@ class PatternLab extends Controller {
             //always use project template files, and grab template files if not already used
 			if ($themeexists && !isset($templates[$templateName])) {
 				$templates[$templateName] = array(
-                    'Name' => $templateName,
+                    'Name' => trim(preg_replace('/([A-Z])/', ' $1', preg_replace('/([0-9])/', '', $templateName))),
                     'Layout' => $this->renderWith(array($templateName))
                 );
 			}

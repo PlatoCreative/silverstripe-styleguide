@@ -3,7 +3,7 @@
 /**
  * @package patternlab
  */
-class PatternLab extends Controller {
+class PatternLab extends Page_Controller {
     public function init() {
 		parent::init();
     }
@@ -34,8 +34,8 @@ class PatternLab extends Controller {
 
 		foreach($manifest->getTemplates() as $templateName => $templateInfo) {
 			$themeexists = $theme && isset($templateInfo['themes'][$theme]) && isset($templateInfo['themes'][$theme]['Patterns']);
-            //always use project template files, and grab template files if not already used
-			if ($themeexists && !isset($templates[$templateName])) {
+
+			if ((isset($templateInfo['Patterns']) || $themeexists) && !isset($templates[$templateName])) {
 				$templates[$templateName] = array(
                     'Name' => trim(preg_replace('/([A-Z])/', ' $1', preg_replace('/([0-9])/', '', $templateName))),
                     'Layout' => $this->renderWith(array($templateName))
@@ -43,7 +43,7 @@ class PatternLab extends Controller {
 			}
 		}
 
-		ksort($templates);
+		// ksort($templates);
 
 		return new ArrayList($templates);
 	}

@@ -12,16 +12,17 @@ $grey: #808080;
     color: #FFF;
     font-family: "HelveticaNeue","Helvetica","Arial",sans-serif;
     text-transform: uppercase;
-    // position: fixed;
-    // top: 0px;
-    // left: 0px;
-    // z-index: 2;
     width: 100%;
+    &:after{
+        content: "";
+        clear: both;
+        display: block;
+    }
     *{
         box-sizing: border-box;
     }
     a{
-        font-size: 70%;
+        font-size: 14px!important;
         color: $grey;
         text-decoration: none;
         display: block;
@@ -37,7 +38,19 @@ $grey: #808080;
     }
     li{
         list-style: none;
+        display: block;
+        @media only screen and (min-width: 500px) {
+            width: 50%;
+            float: left;
+        }
+        @media only screen and (min-width: 1000px) {
+            width: 33.3333%;
+        }
+        @media only screen and (min-width: 1500px) {
+            width: 25%;
+        }
     }
+
 }
 .patternGroup{
     clear: both;
@@ -50,8 +63,14 @@ $grey: #808080;
 .patternTitle{
     margin: 2em 0px;
     font-family: "HelveticaNeue","Helvetica","Arial",sans-serif;
-    font-size: 70%;
+    font-size: 14px!important;
     font-weight: normal;
     padding: 1em 0px;
     border-bottom: 1px solid $grey;
+    a{
+        font-size: 10px!important;
+        color: $grey;
+        text-decoration: none;
+        float: right;
+    }
 }

@@ -1,6 +1,6 @@
 ---
-Name: patternroutes
+Name: styleguideroutes
 ---
 Director:
   rules:
-    'patterns': 'PatternLab'
+    'styleguide': 'StyleGuide'

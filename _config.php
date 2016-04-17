@@ -5,4 +5,4 @@
  *
  * @return string
 **/
-define('PATTERN_DIR', ltrim(Director::makeRelative(realpath(__DIR__)), DIRECTORY_SEPARATOR));
+define('STYLEGUIDE_DIR', ltrim(Director::makeRelative(realpath(__DIR__)), DIRECTORY_SEPARATOR));

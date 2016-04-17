@@ -1,8 +1,8 @@
 {
-    "name": "coreiho/silverstripe-patternlab",
-    "description": "Pattern lab",
+    "name": "coreiho/silverstripe-styleguide",
+    "description": "Style Guide",
     "type": "silverstripe-module",
-    "keywords": ["silverstripe", "patterns", "testing"],
+    "keywords": ["silverstripe", "style", "guide", "development"],
     "license": "BSD-3-Clause",
     "authors": [
     {
@@ -16,6 +16,6 @@
     	"silverstripe/cms": "3.*"
     },
     "extra": {
-        "installer-name": "pattern-lab"
+        "installer-name": "styleguide"
     }
 }

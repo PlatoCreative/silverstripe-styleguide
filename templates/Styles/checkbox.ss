@@ -1,15 +1,15 @@
 <fieldset class="options">
     <legend>Checkbox</legend>
     <div class="field">
-        <input id="radio1" name="radio" class="checkbox" checked="checked" type="radio">
-        <label for="radio1">Choice 1</label>
+        <input id="checkbox1" name="checkbox" class="checkbox" checked="checked" type="checkbox">
+        <label for="checkbox1">Choice 1</label>
     </div>
     <div class="field">
-        <input id="radio2" name="radio" class="checkbox" type="radio">
-        <label for="radio2">Choice 2</label>
+        <input id="checkbox2" name="checkbox" class="checkbox" type="checkbox">
+        <label for="checkbox2">Choice 2</label>
     </div>
     <div class="field">
-        <input id="radio3" name="radio" class="checkbox" type="radio">
-        <label for="radio3">Choice 3</label>
+        <input id="checkbox3" name="checkbox" class="checkbox" type="checkbox">
+        <label for="checkbox3">Choice 3</label>
     </div>
 </fieldset>

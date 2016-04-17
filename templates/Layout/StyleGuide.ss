@@ -1,10 +1,12 @@
 <div class="styleGuideMaster">
     <% if Styles %>
-        <ul class="styleGuideNav">
-        	<% loop Styles %>
-                <li><a href="#{$ID}">$Name</a></li>
-            <% end_loop %>
-        </ul>
+        <div class="styleGuideNav">
+            <ul>
+                <% loop Styles %>
+                    <li><a href="#{$ID}">$Name</a></li>
+                <% end_loop %>
+            </ul>
+        </div>
         <div class="styleGuideGroups">
             <h1>Style Guide</h1>
             <% loop Styles %>

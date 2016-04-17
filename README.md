@@ -1,5 +1,7 @@
 # Silverstripe Style Guide
 
+Creates a page listing common elements to developers style.
+
 ## Installation
 
 ```

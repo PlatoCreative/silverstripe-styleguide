@@ -49,8 +49,16 @@ class StyleGuide extends Controller
             }
         }
 
-        // ksort($templates);
-
         return new ArrayList($templates);
+    }
+
+    public function getTitle()
+    {
+        return 'Style Guide';
+    }
+
+    public function getMenuTitle()
+    {
+        return 'Style Guide';
     }
 }

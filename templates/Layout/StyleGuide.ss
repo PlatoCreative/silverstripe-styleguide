@@ -3,17 +3,17 @@
         <div class="styleGuideNav">
             <ul>
                 <% loop Styles %>
-                    <li><a href="#{$ID}">$Name</a></li>
+                    <li><a href="#{$ID}">{$Name}</a></li>
                 <% end_loop %>
             </ul>
         </div>
         <div class="styleGuideGroups">
-            <h1>Style Guide</h1>
+            <h1>{$Title}</h1>
             <% loop Styles %>
                 <div id="{$ID}" class="styleGuideGroup">
-                    <p class="styleGuideTitle">$Name</p>
+                    <p class="styleGuideTitle">{$Name}</p>
                     <div class="styleGuideLayout">
-                        $Layout
+                        {$Layout}
                     </div>
                 </div>
             <% end_loop %>

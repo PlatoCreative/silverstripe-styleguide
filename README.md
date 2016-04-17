@@ -1,15 +1,11 @@
-# Silverstripe Pattern Lab
+# Silverstripe Style Guide
 
-## Introduction
+## Installation
 
-http://bradfrostweb.com/blog/post/atomic-web-design/
-
-@todo Add thorough readmore
-
-## Using this module
-
-Copy contents from samples/templates to themes/THEME_NAME/templates
+```
+composer require coreiho/silverstripe-styleguide 1.*
+```
 
 Run Dev Build
 
-These templates will be available at /patterns
+The styles will be available at /styleguide

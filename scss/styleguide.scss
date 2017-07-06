@@ -2,30 +2,18 @@ $grey: #808080;
 $dark-grey: #222;
 $white: #fff;
 $font-family: "HelveticaNeue","Helvetica","Arial",sans-serif;
+$font-size: 14px;
 
 .styleGuideMaster{
     border: 1px solid $grey;
     padding: 1em;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 9999;
-    background-color: $white;
     overflow: auto;
+    position: relative;
 }
 
-.styleGuideNav{
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 20%;
+.styleGuideContents{
     margin: 0;
-    background: $dark-grey none repeat scroll 0% 0%;
-    color: $white;
-    font-family: $font-family;
+    font-family: $font-family !important;
     text-transform: uppercase;
     overflow: auto;
     ul{
@@ -39,26 +27,27 @@ $font-family: "HelveticaNeue","Helvetica","Arial",sans-serif;
         display: block;
     }
     a{
-        font-size: 14px!important;
-        color: $grey;
+        font-size: $font-size !important;
+        color: $grey !important;
         text-decoration: none;
         display: block;
-        line-height: 1;
-        padding: 0.5em 1em;
+        line-height: $font-size * 3 !important;
+        padding: 0 1em;
         transition: color 0.15s ease-out 0s;
         cursor: pointer;
         &:hover,
         &:focus{
-            color: $white;
-            background: $dark-grey none repeat scroll 0% 0%;
+            color: $white !important;
+            background: $dark-grey none repeat scroll 0% 0% !important;
         }
     }
 }
+
 .styleGuideGroups{
-    position: absolute;
     left: 20%;
     padding: 2em;
 }
+
 .styleGuideGroup{
     clear: both;
     &:after{
@@ -67,12 +56,13 @@ $font-family: "HelveticaNeue","Helvetica","Arial",sans-serif;
         clear: both;
     }
 }
+
 .styleGuideTitle{
     margin: 2em 0px;
-    font-family: $font-family;
-    font-size: 14px!important;
+    font-family: $font-family !important;
+    font-size: $font-size !important;
     text-transform: uppercase;
     font-weight: normal;
     padding: 1em 0px;
-    border-bottom: 1px solid $grey;
+    border-bottom: 1px solid $grey !important;
 }

@@ -3,4 +3,4 @@ Name: styleguideroutes
 ---
 Director:
   rules:
-    'styleguide': 'StyleGuide'
+    styleguide: 'StyleGuideController'

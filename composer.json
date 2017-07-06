@@ -4,16 +4,11 @@
     "type": "silverstripe-module",
     "keywords": ["silverstripe", "style", "guide", "development"],
     "license": "BSD-3-Clause",
-    "authors": [
-    {
-        "name": "Gorrie Coe",
-        "email": "gorriecoe@gmail.com"
-    }
-    ],
     "require":
     {
-        "silverstripe/framework": "3.*",
-    	"silverstripe/cms": "3.*"
+        "silverstripe/framework": "^3.5",
+    	"silverstripe/cms": "^3.5",
+        "joshtronic/php-loremipsum": "^1.0"
     },
     "extra": {
         "installer-name": "styleguide"

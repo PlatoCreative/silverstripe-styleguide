@@ -1,13 +1,18 @@
 # Silverstripe Style Guide
 
-Creates a page listing common elements to developers style.
+Creates a page listing common elements to help developers style.
 
 ## Installation
 
+Composer is the recommended way of installing SilverStripe modules.
 ```
-composer require plato-creative/silverstripe-styleguide 1.*
+composer require plato-creative/silverstripe-styleguide
 ```
 
-Run Dev Build
+Flush
 
-The styles will be available at /styleguide
+## Requirements
+
+- silverstripe/framework 3.*
+- silverstripe/cms 3.*
+- joshtronic/php-loremipsum 3.*

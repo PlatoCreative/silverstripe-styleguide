@@ -117,4 +117,59 @@ class StyleGuideController extends Page_Controller
         $lorem = new joshtronic\LoremIpsum();
         return $lorem->paragraphs($count);
     }
+
+    public function Field($type = 'TextField', $attributes = null)
+    {
+        $uniqid = uniqid();
+        $optionFields = array(
+            'DropdownField',
+            'CheckboxSetField',
+            'OptionsetField',
+            'ListboxField',
+            'LookupField',
+            'TagField'
+        );
+        $name = str_ireplace('Field', '', $type);
+        $name = preg_replace('/([A-Z])/', ' $1', $name);
+        if (in_array($type, $optionFields)) {
+            $options = array();
+            for ($i=0; $i < 3; $i++) {
+                $options[$i] = $this->Words($i+1);
+            }
+            $field = $type::create($uniqid, $name, $options);
+        } else {
+            $field = $type::create($uniqid, $name);
+        }
+        if ($attributes) {
+            if (strpos($attributes, ';') !== FALSE){
+                $attributes = explode(';', $attributes);
+            } else {
+                $attributes = array($attributes);
+            }
+            foreach ($attributes as $attribute) {
+                if (strpos($attribute, ':') !== FALSE){
+                    list($attribute, $value) = explode(':', $attribute);
+                }
+                switch (strtolower($attribute)) {
+                    case 'required':
+                    case 'require':
+                        $field->addExtraClass($attribute);
+                        break;
+                    case 'title':
+                    case 'label':
+                        $field->setTitle($value);
+                        break;
+                    default:
+                            $field->setAttribute($attribute, $value);
+                        break;
+                }
+            }
+        }
+        return Form::create(
+            $this,
+            $uniqid,
+            FieldList::create(array($field)),
+            FieldList::create(array())
+        );
+    }
 }
